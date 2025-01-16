@@ -9,6 +9,8 @@ from typing import Any, Literal, Optional, Self, Type, TypeAlias, Union
 import aiohttp
 import requests
 
+from datetime import datetime
+
 from qbreader._consts import BASE_URL
 
 
@@ -104,7 +106,7 @@ class Year(enum.IntEnum):
     """Min/max year enum."""
 
     MIN_YEAR = 2010
-    CURRENT_YEAR = 2024
+    CURRENT_YEAR = datetime.now().year
 
 
 class AnswerJudgement:
